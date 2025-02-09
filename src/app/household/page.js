@@ -6,6 +6,7 @@ import Map from '../components/map';
 import Footer from './components/footer';
 
 import styles from "./page.module.css";
+import Image from 'next/image';
 
 export default function Page() {
     const [openNav, setOpenNav] = useState(false);
@@ -23,7 +24,9 @@ export default function Page() {
                 e.stopPropagation();
                 setOpenNav(true)}
             }
-        >=</button>
+        >
+            <Image src={"/hamburger.svg"} alt='hamburger' width={30} height={30}/>
+        </button>
         <Nav isOpen={openNav} closeNav={()=>setOpenNav(false)}/>
         <div className={ styles.mapContainer }>
             <Map/>

@@ -11,4 +11,7 @@
     position: fixed;
     z-index: 10;
     padding: 0.3em 1em;
+    background: #e2bda0;
+    margin: 1em;
+    border-radius: 3px;
 }

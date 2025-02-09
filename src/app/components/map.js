@@ -19,6 +19,15 @@ const truckIcon = new L.Icon({
     popupAnchor: [0, -40], // Point where the popup should open relative to iconAnchor
 });
 
+
+const ZoomPosition = () => {
+    const mapObject = useMap();
+
+    useEffect(() => {
+        mapObject.zoomControl.setPosition('topright');
+    }, [])
+}
+
 export default function Map({ location=[27.694091043169937, 85.32131984920804], isDriver=false, state=0, notifyFunc }) {
     const [isClient, setIsClient] = useState(false);
     const [route, setRoute] = useState([]);
@@ -28,12 +37,10 @@ export default function Map({ location=[27.694091043169937, 85.32131984920804], 
     
 
     useEffect(() => {
-        console.log(notifyFunc);
         setIsClient(true); // Ensures the map only renders on the client
     }, []);
 
     useEffect(() => {
-
         if (route.length > 0) {
             startSim();
         }
@@ -116,6 +123,7 @@ export default function Map({ location=[27.694091043169937, 85.32131984920804], 
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
+            <ZoomPosition />
             <Circle 
                 center={truckPos} 
                 radius={radius} // Radius in meters (1 km)

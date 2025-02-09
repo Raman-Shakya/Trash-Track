@@ -1,11 +1,11 @@
 "use client";
 
 import { useRef, useState, useEffect } from 'react';
-import Nav from './components/nav';
-import Map from '../components/map';
-import Footer from './components/footer';
+import Nav from '../household/components/nav';
+import Map from '../household/components/map';
+import Footer from '../household/components/footer';
 
-import styles from "./page.module.css";
+import styles from "../household/page.module.css";
 
 export default function Page() {
     const [openNav, setOpenNav] = useState(false);
