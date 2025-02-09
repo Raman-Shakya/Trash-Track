@@ -3,15 +3,13 @@
 import styles from './footer.module.css'
 import { useRef, useState, useEffect } from 'react';
 
-export default function Footer() {
-    
-    const [openFooter, setOpenFooter] = useState(false)
+export default function Footer({ isOpen, openFooter, closeFooter}) {
 
-    return <footer className={`${styles.footerWrapper}` } onClick={()=>setOpenFooter(false)}>
-        <div className={`${styles.footer} ${openFooter ? styles.active : ''}`} onClick={(e)=>{
+    return <footer className={`${styles.footerWrapper}` } onClick={closeFooter}>
+        <div className={`${styles.footer} ${isOpen ? styles.active : ''}`} onClick={(e)=>{
             e.stopPropagation()
-            setOpenFooter(true)
-            }}>
+            openFooter()
+        }}>
             Estimate time:
         </div>
     </footer>;
