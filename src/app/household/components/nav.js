@@ -1,4 +1,5 @@
 "use client";
+import Link from 'next/link';
 import styles from './nav.module.css'
 import { useRef, useState, useEffect } from 'react';
 
@@ -6,10 +7,10 @@ export default function Nav({ isOpen }) {
     
     return <nav className={`${styles.navWrapper} ${isOpen ? styles.active : ''}`}>
         <div className={`${styles.navbar}`} onClick={(e)=>e.stopPropagation()}>
-            <a href="#">Home</a>
-            <a href="#">Support</a>
-            <a href="#">Notification</a>
-            <a href="#">Contact</a>
+            <Link href="#">Home</Link>
+            <Link href="/household/support">Support</Link>
+            <Link href="#">Notification</Link>
+            <Link href="#">Notices</Link>
         </div>
     </nav>;
 }
