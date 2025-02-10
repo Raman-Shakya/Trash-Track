@@ -6,6 +6,7 @@ import Map from '../household/components/map';
 import Footer from '../household/components/footer';
 
 import styles from "../household/page.module.css";
+import Image from 'next/image';
 
 export default function Page() {
     const [openNav, setOpenNav] = useState(false);
@@ -24,11 +25,13 @@ export default function Page() {
                 setOpenNav(true);
                 setOpenFooter(false);
             }}
-        >=</button>
+        >
+            <Image src={"/hamburger.svg"} alt='hamburger' width={20} height={20}/>
+        </button>
         <Nav isOpen={openNav} closeNav={()=>setOpenNav(false)}/>
         <div className={ styles.mapContainer }>
             <Map isDriver/>
         </div>
-        <Footer isOpen={openFooter} openFooter={()=>setOpenFooter(true)} closeFooter={()=>setOpenFooter(false)}/>
+        <Footer isOpen={openFooter} openFooter={()=>setOpenFooter(true)} closeFooter={()=>setOpenFooter(false)} isDriver/>
     </div>;
 }

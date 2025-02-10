@@ -12,7 +12,15 @@ export default function Support() {
         <Nav isOpen={openNav} closeNav={()=>setOpenNav(false)}/>
         <div className={styles.support}>
 
-            <button onClick={() => setOpenNav(true)}>=</button>
+            <button 
+                className={styles.hamburger}
+                onClick={(e)=>{
+                    e.stopPropagation();
+                    setOpenNav(true);
+                }}
+            >
+                <Image src={"/hamburger.svg"} alt='hamburger' width={20} height={20}/>
+            </button>            
             {/* <div className={styles.trademarkContainer}>
                 <Image src={"/logo.png"} alt='logo' width={100} height={100}/>
                 <h1>Trash <span>Track</span></h1>

@@ -3,7 +3,7 @@
 import styles from './footer.module.css'
 import { useRef, useState, useEffect } from 'react';
 
-export default function Footer({ isOpen, openFooter, closeFooter, status}) {
+export default function Footer({ isOpen, openFooter, closeFooter, status, isDriver=false}) {
 
     const [speed, setSpeed] = useState(20);
 
@@ -23,16 +23,25 @@ export default function Footer({ isOpen, openFooter, closeFooter, status}) {
             openFooter()
         }}>
             <div className={styles.title_div}>
-                <h2 className={styles.heading}>Estimate time: <span>20 mins</span></h2>
+                <h2 className={styles.heading}>{ isDriver ? "Estimate time:" : "Remaining Driving: "} <span>20 mins</span></h2>
                 <div className={styles.status}>
-                    { status==0 ? 'Waiting' : status==1 ? 'Approaching' : 'Dumped'}
+                    { !isDriver ? (status==0 ? 'Waiting' : status==1 ? 'Approaching' : 'Dumped')
+                    : (status==0 ? 'Idling' : status==1 ? 'Dumping' : "Driving")}
                 </div>
             </div>
             <hr></hr>
-            <div className={styles.driver}>
-                <p>Driver Name: <span>John Doe</span></p>
-                <p>Contact Details: <span>9841003456</span></p>
-            </div>
+            { !isDriver ? 
+                <div className={styles.driver}>
+                    <p>Driver Name: <span>John Doe</span></p>
+                    <p>Contact Details: <span>9841003456</span></p>
+                </div>
+                :
+                <div className={styles.driver}>
+                    <p>Next Stop: <span>Teku Dovan Chowk</span></p>
+                    <p>Distance: <span>1km</span></p>
+                </div>
+            }
+
             <div className={styles.vehicle}>
                 <p>Vehicle Number: <span>B AB0123</span></p>
                 <p>Speed: <span>{parseInt(speed)}  km/h</span></p>

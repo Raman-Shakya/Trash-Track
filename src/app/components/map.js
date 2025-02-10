@@ -3,8 +3,8 @@
 import { MapContainer, TileLayer, Marker, Popup, Polyline, useMap, Circle } from "react-leaflet";
 import { useRef, useState, useEffect } from 'react';
 
-const waypoints = [[27.6933211,85.3004346], [27.695020, 85.310076], [27.693513, 85.310319]]
-
+// const waypoints = [[27.6933211,85.3004346], [27.695020, 85.310076], [27.693513, 85.310319], [27.6939009,85.3003921], [27.6933211,85.3004346]]
+const waypoints = [[27.693207, 85.301712], [27.696200, 85.307259], [27.693150, 85.304555]]
 function ChangeView({ center }) {
     const map = useMap();
     map.setView(center);
@@ -128,15 +128,18 @@ export default function Map({ location=[27.6933211,85.3004346], isDriver=false, 
                 pathOptions={{ color: "lightblue", fillColor: "lightblue", fillOpacity: 0.6 }}
             >
             </Circle>
-            <Marker position={location}>
-                <Popup>
-                    {
-                        state==0 ? "Waiting for dump truck":
-                        state==1 ? "Dump Truck is nearing":
-                        state==3 ? "Dump Truck left": "Dumped Garbage"
-                    }
-                </Popup>
-            </Marker>
+            {
+                !isDriver && 
+                <Marker position={location}>
+                    <Popup>
+                        {
+                            state==0 ? "Waiting for dump truck":
+                            state==1 ? "Dump Truck is nearing":
+                            state==3 ? "Dump Truck left": "Dumped Garbage"
+                        }
+                    </Popup>
+                </Marker>
+            }
             <Marker position={truckPos} icon={truckIcon}></Marker>
             {route.length > 0 && <Polyline positions={route} color="blue" weight={4} />}
         </MapContainer>
