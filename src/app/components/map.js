@@ -27,7 +27,7 @@ const ZoomPosition = () => {
     }, [])
 }
 
-export default function Map({ location=[27.694091043169937, 85.32131984920804], isDriver=false, state=0, notifyFunc }) {
+export default function Map({ location=[27.6933211,85.3004346], isDriver=false, state=0, notifyFunc }) {
     const [isClient, setIsClient] = useState(false);
     const [route, setRoute] = useState([]);
     const [truckPos, setTruckPos] = useState({lat:0, lon:0});
@@ -127,7 +127,6 @@ export default function Map({ location=[27.694091043169937, 85.32131984920804], 
                 radius={radius} // Radius in meters (1 km)
                 pathOptions={{ color: "lightblue", fillColor: "lightblue", fillOpacity: 0.6 }}
             >
-                <Popup>📍 1km radius from Kathmandu</Popup>
             </Circle>
             <Marker position={location}>
                 <Popup>

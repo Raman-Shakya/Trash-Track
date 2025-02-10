@@ -13,7 +13,6 @@ const MapContainer = () => {
 
     const notify = useCallback((st) => {
 
-        console.log("sakdjaldksj");
         setState((prevState) => {
             if (st) return 1; // Proximity warning
             if (!st && prevState === 1) return 2; // Dumped
