@@ -1,3 +1,4 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Quattrocento&display=swap'); */
 
 .navbar {
     position: fixed;
@@ -19,9 +20,13 @@
     position: absolute;
     width: fit-content;
     padding: 0.5em 1em;
-    right: 30px;
-    top: 40px;
-    background: rgb(221, 51, 51);
+    right: 5px;
+    top: 15px;
+    cursor: pointer;
+    background: transparent;
+    color: black;
+    font-family: 'Inter';
+    font-weight: bold;
     border-radius: 1em;
     border: 0;
     font-size: 16px;
@@ -33,6 +38,7 @@
     flex-direction: column;
     height: 100%;
     padding: 0 20px;
+    font-size: 15px;
 }
 .navWrapper.active .navbar {
     transform: translateX(0);
@@ -43,21 +49,28 @@
 }
 
 .trademarkContainer {
+    display: flex;
+    align-items: center;
+    gap: 17px;
     text-align: center;
     width: fit-content;
     padding: 20px;
+    padding-bottom: 0px;
+    font-size:23px;
+    /* font-family: 'Quattrocento'; */
 }
 
 .trademarkContainer span {
     color: #3d964e;
 }
-.trademarkContainer {
+/* .trademarkContainer {
     margin-bottom: 1em;
-}
+} */
 
 .navLists {
     padding: 0.1em 1.3em 0.1em 0.5em;
     margin: 1em 0;
+    /* font-family: 'Quattrocento'; */
 }
 
 .navLists li {
@@ -65,14 +78,14 @@
 }
 .navLists li a {
     display: block;
-    padding: 0.7em 1em 0.7em 0;
+    padding: 0.5em 1em 0.5em 0;
     width: 100%;
-    font-size: 20px;
+    font-size: 18px;
 }
 .navLists li a.active {
-    background: #24c73d;
+    background: #ecffdf;
     padding-left: 10px;
-    border-radius: 3px 20px 20px 3px;
+    border-radius: 3px 15px 15px 3px;
 }
 .navbar hr {
     background-color: rgb(3, 71, 3);
