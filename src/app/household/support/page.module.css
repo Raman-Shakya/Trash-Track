@@ -1,0 +1,41 @@
+.support {
+    background-color: #aee6a6;
+    color: black;
+    height: 100vh;
+    width: 100vw;
+    padding: 38px;
+}
+
+.selector {
+    padding: 5px;
+    background-color: wheat;
+    width: 100%;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.description {
+    width: 100%;
+}
+
+.textArea {
+    width: 100%;
+    padding: 10px;
+    background-color: wheat;
+    color: black;
+}
+
+.label {
+    margin-bottom: 10px;
+}
+
+.input {
+    visibility: hidden;
+}
+
+.card {
+    background-color: #7ca577;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10;
+    
+}
