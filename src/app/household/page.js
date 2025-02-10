@@ -25,7 +25,7 @@ export default function Page() {
                 setOpenFooter(false);
             }}
         >
-            <Image src={"/hamburger.svg"} alt='hamburger' width={30} height={30}/>
+            <Image src={"/hamburger.svg"} alt='hamburger' width={20} height={20}/>
         </button>
         <Nav isOpen={openNav} closeNav={()=>setOpenNav(false)}/>
         <div className={ styles.mapContainer }>
