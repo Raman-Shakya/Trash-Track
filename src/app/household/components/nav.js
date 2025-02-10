@@ -17,7 +17,7 @@ export default function Nav({ isOpen, closeNav }) {
             <div className={styles.navWrapper}>
                 <div className={styles.mainNav}>
                     <ul className={styles.navLists}>
-                        <li><Link href="#" className={styles.active}>Home</Link></li>
+                        <li><Link href="/household" className={styles.active}>Home</Link></li>
                         <li><Link href="/household/support">Support</Link></li>
                         <li><Link href="#">Notification</Link></li>
                         <li><Link href="#">Notices</Link></li>
