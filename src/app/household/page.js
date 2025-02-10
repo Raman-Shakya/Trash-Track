@@ -10,7 +10,8 @@ import Image from 'next/image';
 
 export default function Page() {
     const [openNav, setOpenNav] = useState(false);
-    const [openFooter, setOpenFooter] = useState(false)
+    const [openFooter, setOpenFooter] = useState(false);
+    const [state, setState] = useState(0);
 
     return <div onClick={() => {
         setOpenNav(false);
@@ -28,8 +29,8 @@ export default function Page() {
         </button>
         <Nav isOpen={openNav} closeNav={()=>setOpenNav(false)}/>
         <div className={ styles.mapContainer }>
-            <Map/>
+            <Map state={state} setState={setState}/>
         </div>
-        <Footer isOpen={openFooter} openFooter={()=>setOpenFooter(true)} closeFooter={()=>setOpenFooter(false)}/>
+        <Footer isOpen={openFooter} status={state} openFooter={()=>setOpenFooter(true)} closeFooter={()=>setOpenFooter(false)}/>
     </div>;
 }
