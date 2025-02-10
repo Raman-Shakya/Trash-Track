@@ -25,7 +25,7 @@ const Page = ({location=[27.6933211,85.3004346]}) => {
 
     return (
         <div className={styles.wrapper}>
-            <h1>Analysis</h1>
+            <h1>Analytics</h1>
             <hr></hr>
             <div>
                 <h2>Frequency of Pickup Requests</h2>

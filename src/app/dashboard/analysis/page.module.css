@@ -1,12 +1,17 @@
 .wrapper {
     width: 100vw;
-    min-height: 100vh;
+    min-height: 300vh;
     background: #aee6a6;
     color: rgb(54, 56, 54);
-    padding: 20px;
+    padding: 50px 30px;
 }
 
 .wrapper hr {
     background-color: green;
-    margin: 1em 0 2em 0;
+    margin: 0.7em 0 2em 0;
+}
+
+.wrapper h2 {
+    color: rgb(68, 67, 67);
+    margin: 15px 0;
 }

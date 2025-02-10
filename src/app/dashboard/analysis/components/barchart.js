@@ -57,7 +57,7 @@ const BarChart = () => {
         },
     };
 
-    return <div style={{backgroundColor: "#f2efe9", marginTop: "50px", borderRadius: "10px"}}>
+    return <div style={{backgroundColor: "#f2efe9", marginTop: "10px", borderRadius: "10px", marginBottom: "-100px", padding: "40px 10px"}}>
         <Bar data={{
             labels: labels,
             datasets: [

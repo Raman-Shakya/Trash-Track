@@ -4,16 +4,25 @@
     height: 100vh;
     width: 100vw;
     padding: 38px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    min-height: 100vh;
 }
 
 .selector {
     padding: 5px;
-    background-color: wheat;
+    background-color: #ecffdf;
+    color: #666666;
     width: 100%;
-    margin-bottom: 10px;
-    color: black;
     border: none;
-    border-radius: 10px;
+    border-radius: 4px;
+    outline: none;
+}
+.selector option {
+    color: #666666;
 }
 
 .description {
@@ -21,12 +30,15 @@
 }
 
 .textArea {
+    font-family: inherit;
+    outline: none;
     width: 100%;
     padding: 10px;
-    background-color: wheat;
+    background-color: #ecffdf;
     color: black;
     border: none;
-    border-radius: 15px;
+    border-radius: 4px;
+    margin: 0;
 }
 
 .label {
@@ -34,14 +46,30 @@
 }
 
 .input {
-    visibility: hidden;
+    display: none;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin: 20px 0;
 }
 
 .card {
-    background-color: #7ca577;
-    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ecffdf;
+    border-radius: 4px;
+    text-align: center;
     box-shadow: 5px 5px 10;
-    
+    padding: 20px;
+    color: gray;
+}
+.card img {
+    filter: brightness(0);
 }
 
 .trademarkContainer {
@@ -66,4 +94,6 @@
     padding: 0.5em 1.3em;
     border: none;
     border-radius: 10px;
+    float: right;
+    background-color: #3d964e;
 }

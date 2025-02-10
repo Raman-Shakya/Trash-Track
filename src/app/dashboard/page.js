@@ -27,6 +27,7 @@ export default function Dashboard() {
     
     return <div className={styles.mainWrapper}>
         <h1>Petitions</h1>
+        <hr></hr>
         <div className={styles.cardDiv}>
             { petitions.map((petition, index) => <Card key={index} petition={petition} />)}
         </div>
