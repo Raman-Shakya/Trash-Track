@@ -1,0 +1,12 @@
+.wrapper {
+    width: 100vw;
+    min-height: 100vh;
+    background: #aee6a6;
+    color: rgb(54, 56, 54);
+    padding: 20px;
+}
+
+.wrapper hr {
+    background-color: green;
+    margin: 1em 0 2em 0;
+}
