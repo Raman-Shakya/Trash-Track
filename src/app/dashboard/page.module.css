@@ -1,12 +1,10 @@
-.card {
-    width: 100vw;
-    height: 100vh;
-    background-color: antiquewhite;
+.mainWrapper {
+    padding: 10px;
+    background: #aee6a6;
+    color: black;
 }
 
-.cardContent {
-    width: 50%;
-    height: 50%;
+.card {
     color: black;
     background-color: aquamarine;
     text-wrap: wrap;
