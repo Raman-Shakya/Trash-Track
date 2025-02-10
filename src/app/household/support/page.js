@@ -6,7 +6,13 @@ import { useRef, useState, useEffect } from 'react';
 
 export default function Support() {
     return <div className={`${styles.support}`}>
+        <div className={styles.trademarkContainer}>
+            <Image src={"/logo.png"} alt='logo' width={100} height={100}/>
+            <h1>Trash <span>Track</span></h1>
+        </div>
+        <hr />
         <div>
+            <h2>Support</h2>
             <label className={`${styles.label}`}>Choose Service</label>
             <select required className={`${styles.selector}`}>
                 <option>Select</option>
@@ -29,6 +35,9 @@ export default function Support() {
                 <Image src={"/upload.png"} alt='upload' width={150} height={150}/>
             </label>
             <input id='img-input' type='file' accept='image/*' className={styles.input}></input>
+        </div>
+        <div className={styles.submit}>
+            <button>submit</button>
         </div>
     </div>;
 }
