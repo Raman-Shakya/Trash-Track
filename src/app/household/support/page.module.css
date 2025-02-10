@@ -12,6 +12,8 @@
     width: 100%;
     margin-bottom: 10px;
     color: black;
+    border: none;
+    border-radius: 10px;
 }
 
 .description {
@@ -23,6 +25,8 @@
     padding: 10px;
     background-color: wheat;
     color: black;
+    border: none;
+    border-radius: 15px;
 }
 
 .label {
@@ -38,4 +42,28 @@
     border-radius: 15px;
     box-shadow: 5px 5px 10;
     
+}
+
+.trademarkContainer {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: fit-content;
+}
+.trademarkContainer span {
+    color: #3d964e;
+}
+.support hr {
+    background-color: green;
+    margin: 10px 0;
+}
+.support h2 {
+    margin: 24px 0 10px 0;
+}
+
+.submit button {
+    width: fit-content;
+    padding: 0.5em 1.3em;
+    border: none;
+    border-radius: 10px;
 }
