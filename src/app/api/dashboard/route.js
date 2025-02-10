@@ -1,9 +1,15 @@
 import { NextResponse } from "next/server";
+import db from "../dbConnection";
+import Petition from "../models/petition";
+
 
 export const GET = async (req, res) => {
     // const data1 = request?.nextUrl?.searchParams.get('data1');
-    
-    return NextResponse.json({});
+    const data = await Petition.find({});
+    console.log(data);
+
+
+    return NextResponse.json(data);
 }
 
 // export const POST = async (req, res) => {
