@@ -1,0 +1,17 @@
+.card {
+    width: 100vw;
+    height: 100vh;
+    background-color: antiquewhite;
+}
+
+.cardContent {
+    width: 50%;
+    height: 50%;
+    color: black;
+    background-color: aquamarine;
+    text-wrap: wrap;
+    /* overflow: hidden; */
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px;
+}
