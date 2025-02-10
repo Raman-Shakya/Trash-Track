@@ -3,13 +3,12 @@
 import React, { useCallback, useState } from 'react'
 import Map from '../../components/map';
 
-const MapContainer = ({isDriver}) => {
+const MapContainer = ({isDriver, state, setState}) => {
     /*
         0 - idle state - waiting for dump truck
         1 - got proximity warning - dump truck is near
         2 - dumped - truck leaves
     */
-    const [state, setState] = useState(0);
 
     const notify = useCallback((st) => {
         setState((prevState) => {
