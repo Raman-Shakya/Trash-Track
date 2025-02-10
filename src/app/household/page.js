@@ -2,7 +2,7 @@
 
 import { useRef, useState, useEffect } from 'react';
 import Nav from './components/nav';
-import Map from '../components/map';
+import Map from './components/map';
 import Footer from './components/footer';
 
 import styles from "./page.module.css";

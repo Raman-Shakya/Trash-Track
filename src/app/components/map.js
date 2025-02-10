@@ -2,7 +2,6 @@
 
 import { MapContainer, TileLayer, Marker, Popup, Polyline, useMap, Circle } from "react-leaflet";
 import { useRef, useState, useEffect } from 'react';
-import useWebSocket from "react-use-websocket";
 
 const waypoints = [[27.690319, 85.328510], [27.694372, 85.321110]]
 
@@ -51,7 +50,6 @@ export default function Map({ location=[27.694091043169937, 85.32131984920804], 
 
         const distance = ((location[0]-truckPos.lat)**2 + (location[1]-truckPos.lon)**2)**.5;
         // console.log(distance*1000*100, radius);
-        console.log(notifyFunc);
         if (notifyFunc)
             notifyFunc(distance*1000*100 < radius);
         // if (distance*1000*100 < radius) {
@@ -117,7 +115,7 @@ export default function Map({ location=[27.694091043169937, 85.32131984920804], 
 
     if (!isClient) return <p>Loading map...</p>;    
     return( 
-        <MapContainer style= {{height:"100%", width:"100%"}} center={location} zoom={isDriver ? 24 : 15} scrollWheelZoom={true}>
+        <MapContainer style= {{height:"100vh", width:"100vw"}} center={location} zoom={isDriver ? 24 : 15} scrollWheelZoom={true}>
             { isDriver && <ChangeView center={[truckPos.lat, truckPos.lon]} /> }
             <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
