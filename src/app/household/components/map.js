@@ -3,7 +3,7 @@
 import React, { useCallback, useState } from 'react'
 import Map from '../../components/map';
 
-const MapContainer = () => {
+const MapContainer = ({isDriver}) => {
     /*
         0 - idle state - waiting for dump truck
         1 - got proximity warning - dump truck is near
@@ -21,7 +21,7 @@ const MapContainer = () => {
 
     return (
         <div>
-            <Map state={state} notifyFunc={notify} />
+            <Map state={state} notifyFunc={notify} isDriver={isDriver} />
         </div>
     )
 }

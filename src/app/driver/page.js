@@ -21,8 +21,9 @@ export default function Page() {
             className={styles.hamburger}
             onClick={(e)=>{
                 e.stopPropagation();
-                setOpenNav(true)}
-            }
+                setOpenNav(true);
+                setOpenFooter(false);
+            }}
         >=</button>
         <Nav isOpen={openNav} closeNav={()=>setOpenNav(false)}/>
         <div className={ styles.mapContainer }>

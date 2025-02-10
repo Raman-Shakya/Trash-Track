@@ -3,7 +3,7 @@
 import { MapContainer, TileLayer, Marker, Popup, Polyline, useMap, Circle } from "react-leaflet";
 import { useRef, useState, useEffect } from 'react';
 
-const waypoints = [[27.690319, 85.328510], [27.694372, 85.321110]]
+const waypoints = [[27.6933211,85.3004346], [27.695020, 85.310076], [27.693513, 85.310319]]
 
 function ChangeView({ center }) {
     const map = useMap();
@@ -13,8 +13,8 @@ function ChangeView({ center }) {
 
 const truckIcon = new L.Icon({
     iconUrl: "./dumpTruckIcon.png", // Replace with your icon URL
-    iconSize: [90, 90], // Size of the icon
-    iconAnchor: [45, 45], // Point of the icon that corresponds to marker's location
+    iconSize: [60, 60], // Size of the icon
+    iconAnchor: [30, 30], // Point of the icon that corresponds to marker's location
     popupAnchor: [0, -40], // Point where the popup should open relative to iconAnchor
 });
 
@@ -31,7 +31,7 @@ export default function Map({ location=[27.694091043169937, 85.32131984920804], 
     const [isClient, setIsClient] = useState(false);
     const [route, setRoute] = useState([]);
     const [truckPos, setTruckPos] = useState({lat:0, lon:0});
-    const [radius, setRadius] = useState(75);
+    const [radius, setRadius] = useState(100);
     // const { sendMessage, lastMessage, readyState } = useWebSocket('http://localhost:4000');
     
 
@@ -60,7 +60,7 @@ export default function Map({ location=[27.694091043169937, 85.32131984920804], 
 
     function startSim() {
         var distance = 0;
-        var delta = 0.0001;
+        var delta = 0.00001;
 
         const interval = setInterval(() => {
             distance += delta;

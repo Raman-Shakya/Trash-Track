@@ -12,8 +12,6 @@ export default function Page() {
     const [openNav, setOpenNav] = useState(false);
     const [openFooter, setOpenFooter] = useState(false)
 
-    useEffect(()=>{console.log(openNav)},[openNav])
-
     return <div onClick={() => {
         setOpenNav(false);
         setOpenFooter(false);
@@ -22,8 +20,9 @@ export default function Page() {
             className={styles.hamburger}
             onClick={(e)=>{
                 e.stopPropagation();
-                setOpenNav(true)}
-            }
+                setOpenNav(true);
+                setOpenFooter(false);
+            }}
         >
             <Image src={"/hamburger.svg"} alt='hamburger' width={30} height={30}/>
         </button>
