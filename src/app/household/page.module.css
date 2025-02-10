@@ -9,9 +9,15 @@
 
 .hamburger {
     position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 10;
-    padding: 0.3em 1em;
-    background: #e2bda0;
+    background: #42b883;
     margin: 1em;
-    border-radius: 3px;
+    border: none;
+    border-radius: 100px;
+    height: 42px;
+    aspect-ratio: 1/1;
 }
+

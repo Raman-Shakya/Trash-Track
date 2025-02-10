@@ -8,9 +8,9 @@ export default function Nav({ isOpen, closeNav }) {
     
     return <nav className={`${styles.navWrapper} ${isOpen ? styles.active : ''}`}>
         <div className={`${styles.navbar}`} onClick={(e)=>e.stopPropagation()}>
-            <button className={styles.closeButton} onClick={closeNav}>x</button>
+            <button className={styles.closeButton} onClick={closeNav}>X</button>
             <div className={styles.trademarkContainer}>
-                <Image src={"/logo.png"} alt='logo' width={150} height={150}/>
+                <Image src={"/logo.png"} alt='logo' width={90} height={90}/>
                 <h1>Trash <span>Track</span></h1>
             </div>
             <hr/>
